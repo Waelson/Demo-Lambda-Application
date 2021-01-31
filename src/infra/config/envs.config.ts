@@ -71,9 +71,9 @@ export class EnvsConfig {
 
     /**
      * Nome da fila SQS para tratamento de erros.
-     * Variavel: SURFBANK_SQS_AWS_QUEUE_ERROR
+     * Variavel: SQS_AWS_QUEUE_ERROR
      */
     static getEnvSqsAwsQueueErro(): string{
-        return process.env.SURFBANK_SQS_AWS_QUEUE_ERROR;
+        return process.env.SQS_AWS_QUEUE_ERROR;
     }                
 }
