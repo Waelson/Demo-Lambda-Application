@@ -7,10 +7,10 @@ export class EnvsConfig {
 
     /**
      * Endereco do servidor de banco de dados.
-     * Variavel: SURFBANK_DB_HOST
+     * Variavel: DB_HOST
      */
     static getEnvDbHost(): string{
-        return process.env.SURFBANK_DB_HOST;
+        return process.env.DB_HOST;
     }
 
     /**
@@ -18,55 +18,55 @@ export class EnvsConfig {
      * Variavel: SURFBANK_DB_PORTA
      */
     static getEnvDbPorta(): number{
-        return parseInt(process.env.SURFBANK_DB_PORTA);
+        return parseInt(process.env.DB_PORTA);
     }    
 
     /**
      * Usuario do servidor de banco de dados.
-     * Variavel: SURFBANK_DB_USUARIO
+     * Variavel: DB_USUARIO
      */
     static getEnvDbUsuario(): string{
-        return process.env.SURFBANK_DB_USUARIO;
+        return process.env.DB_USUARIO;
     }
 
     /**
      * Senha do servidor de banco de dados.
-     * Variavel: SURFBANK_DB_SENHA
+     * Variavel: DB_SENHA
      */
     static getEnvDbSenha(): string{
-        return process.env.SURFBANK_DB_SENHA;
+        return process.env.DB_SENHA;
     }
 
     /**
      * Nome do banco de dados.
-     * Variavel: SURFBANK_DB_BANCO
+     * Variavel: DB_BANCO
      */
     static getEnvDbBanco(): string{
-        return process.env.SURFBANK_DB_BANCO;
+        return process.env.DB_BANCO;
     }
 
     /**
      * URL da API Spec.
-     * Variavel: SURFBANK_API_SPEC
+     * Variavel: API_SPEC
      */
     static getEnvSpecApiUrl(): string{
-        return process.env.SURFBANK_API_SPEC;
+        return process.env.API_SPEC;
     }
 
     /**
      * Numero do AccountID utilizado no servico SQS.
-     * Variavel: SURFBANK_SQS_AWS_ACCOUNT_ID
+     * Variavel: SQS_AWS_ACCOUNT_ID
      */
     static getEnvSqsAwsAccountId(): string{
-        return process.env.SURFBANK_SQS_AWS_ACCOUNT_ID;
+        return process.env.SQS_AWS_ACCOUNT_ID;
     }
 
     /**
      * Regiao utilizada no servico SQS.
-     * Variavel: SURFBANK_SQS_AWS_REGION
+     * Variavel: SQS_AWS_REGION
      */
     static getEnvSqsAwsRegion(): string{
-        return process.env.SURFBANK_SQS_AWS_REGION;
+        return process.env.SQS_AWS_REGION;
     }
 
     /**
