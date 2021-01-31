@@ -1,0 +1,14 @@
+{
+    "SURFBANK_DB_HOST": "host.com.br",
+    "SURFBANK_DB_PORTA": 5432,
+    "SURFBANK_DB_USUARIO": "postgres",
+    "SURFBANK_DB_SENHA": "senha",
+    "SURFBANK_DB_BANCO": "surfbank",
+    "SURFBANK_API_SPEC": "xxxxxxxxxxxxxxxx",
+    "SURFBANK_SQS_AWS_ACCOUNT_ID": "xxxxxxxx",
+    "SURFBANK_SQS_AWS_REGION": "us-east-x",
+    "SURFBANK_SQS_AWS_QUEUE_ERROR": "xxxxxxxxxx",
+    "STAGE_QUEUE": "dev",
+    "SECURITY_GROUP_IDS": ["sg-xxxxxxxxx"],
+    "SUBNET_IDS": ["subnet-xxxxxxxxxxx", "subnet-xxxxxxxxxx"]
+}

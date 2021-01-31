@@ -1,0 +1,23 @@
+{
+  "definitions": {},  
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "idCliente": {
+      "type": "integer"
+    },
+    "nome": {
+      "type": "string"
+    },
+    "cpfCnpj": {
+      "type": "string",
+      "minLength": 11,
+      "maxLength": 14
+    },
+    "codTipoCliente": {
+      "type": "integer"
+    } 
+  },
+  "required": ["nome", "cpfCnpj"]
+  
+}
