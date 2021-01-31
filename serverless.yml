@@ -32,15 +32,15 @@ provider:
         - Fn::GetAtt: [filaErros, Arn]
 
   environment:
-    SURFBANK_DB_HOST: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):SURFBANK_DB_HOST} 
-    SURFBANK_DB_PORTA: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):SURFBANK_DB_PORTA}
-    SURFBANK_DB_USUARIO: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):SURFBANK_DB_USUARIO}
-    SURFBANK_DB_SENHA: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):SURFBANK_DB_SENHA} 
-    SURFBANK_DB_BANCO: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):SURFBANK_DB_BANCO} 
-    SURFBANK_API_SPEC: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):SURFBANK_API_SPEC} 
-    SURFBANK_SQS_AWS_ACCOUNT_ID: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):SURFBANK_SQS_AWS_ACCOUNT_ID} 
-    SURFBANK_SQS_AWS_REGION: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):SURFBANK_SQS_AWS_REGION} 
-    SURFBANK_SQS_AWS_QUEUE_ERROR: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):STAGE_QUEUE}_${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):SURFBANK_SQS_AWS_QUEUE_ERROR} 
+    SURFBANK_DB_HOST: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):DB_HOST} 
+    SURFBANK_DB_PORTA: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):DB_PORTA}
+    SURFBANK_DB_USUARIO: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):DB_USUARIO}
+    SURFBANK_DB_SENHA: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):DB_SENHA} 
+    SURFBANK_DB_BANCO: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):DB_BANCO} 
+    SURFBANK_API_SPEC: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):API_SPEC} 
+    SURFBANK_SQS_AWS_ACCOUNT_ID: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):SQS_AWS_ACCOUNT_ID} 
+    SURFBANK_SQS_AWS_REGION: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):SQS_AWS_REGION} 
+    SURFBANK_SQS_AWS_QUEUE_ERROR: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):STAGE_QUEUE}_${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):SQS_AWS_QUEUE_ERROR} 
 
 functions:
   integracao-api-spec:
@@ -90,4 +90,4 @@ resources:
     filaErros:
       Type: AWS::SQS::Queue
       Properties:
-        QueueName: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):STAGE_QUEUE}_${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):SURFBANK_SQS_AWS_QUEUE_ERROR}
+        QueueName: ${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):STAGE_QUEUE}_${file(./serverless-${opt:stage, self:provider.stage, 'local'}.json):SQS_AWS_QUEUE_ERROR}
